@@ -1,0 +1,1 @@
+import{i as e,n as t}from"./jsx-runtime-Dk72oS4N.js";import{F as n,q as r}from"./link-DX6B3BEb.js";var i=e(t(),1);function a(e,t,a,o){let s=n(a),c=a==null;(0,i.useEffect)(()=>{if(!(c||e.current==null))return r(e.current,t,s,o)},[e,t,o,c])}export{a as t};

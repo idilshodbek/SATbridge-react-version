@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Dk72oS4N.js";import{f as t}from"./compose-U624G3a7.js";var n=e();function r({children:e,className:r}){return(0,n.jsx)(`div`,{className:t(`text-[12px] font-extrabold tracking-[1.2px] text-muted-2`,r),children:e})}export{r as t};

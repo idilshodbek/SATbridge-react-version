@@ -1,0 +1,1 @@
+function e(e,t){let n={focus:e.focusMinutes*60,break:e.breakMinutes*60},r=`focus`,i=e.secondsLeft-t;for(;i<=0;)r=r===`focus`?`break`:`focus`,i+=n[r];return{phase:r,secondsLeft:i,phaseSeconds:n[r]}}export{e as t};

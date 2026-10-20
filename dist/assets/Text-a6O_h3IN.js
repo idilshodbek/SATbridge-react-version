@@ -1,0 +1,1 @@
+import{i as e,n as t}from"./jsx-runtime-Dk72oS4N.js";import{i as n,l as r}from"./compose-U624G3a7.js";import{s as i}from"./ProgressBar-B70jPbEQ.js";var a=e(t(),1),o=(0,a.createContext)({}),s=i(function(e,t){[e,t]=n(e,t,o);let{elementType:i=`span`,...s}=e,c=r[i];return a.createElement(c,{className:`react-aria-Text`,...s,ref:t})});export{o as n,s as t};

@@ -1,0 +1,1 @@
+var e=e=>String(e).padStart(2,`0`);function t(t){return`${Math.floor(t/60)}:${e(t%60)}`}function n(t){return`${Math.floor(t/3600)}h ${e(Math.floor(t%3600/60))}m ${e(t%60)}s`}var r=e=>`ABCD`[e];export{t as n,n as r,r as t};

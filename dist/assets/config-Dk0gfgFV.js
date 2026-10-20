@@ -1,0 +1,1 @@
+var e={showProBanners:!0,showKeyboardTips:!0};export{e as t};

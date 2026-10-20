@@ -1,0 +1,1 @@
+function e(e,t){let n=0,r=e.map(({color:e,percent:t})=>{let r=n+Math.round(t*3.6),i=`${e} ${n}deg ${r}deg`;return n=r,i});return t&&r.push(`${t} ${n}deg`),`conic-gradient(${r.join(`,`)})`}export{e as t};

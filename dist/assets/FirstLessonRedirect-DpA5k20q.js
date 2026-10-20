@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Dk72oS4N.js";import{X as t,cn as n,kt as r}from"./index-DcYMX3dZ.js";var i=e();function a(){return(0,i.jsx)(n,{to:r.lesson(t[0].id),replace:!0})}export{a as FirstLessonRedirect};

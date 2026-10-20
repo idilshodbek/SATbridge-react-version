@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Dk72oS4N.js";import{f as t}from"./compose-U624G3a7.js";var n=e();function r({children:e,icon:r,className:i}){return(0,n.jsxs)(`div`,{className:t(`flex items-center gap-3`,i),children:[r,(0,n.jsx)(`h1`,{className:`text-[32px] font-extrabold tracking-[-0.8px]`,children:e})]})}export{r as t};

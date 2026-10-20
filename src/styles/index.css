@@ -1,0 +1,79 @@
+/* Tailwind CSS v4 must come first, then HeroUI v3 (import order matters). */
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@import "./theme.css";
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  /* The design uses the browser default line height (Tailwind's preflight sets 1.5). */
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+/* Scrollbars from the design */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Hide scrollbars on the mobile shell's scroll areas (the design hides them on phones). */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  /*
+   * HeroUI sets Tailwind `text-sm`/`text-base` (with their line heights) on its controls.
+   * The design uses the browser default line height, so restore it; font sizes are set per use.
+   */
+  .button,
+  .toggle-button,
+  .tabs__tab,
+  .chip,
+  .kbd,
+  .menu-item,
+  .header,
+  .input,
+  .search-field__group,
+  .search-field__input,
+  .checkbox__content,
+  .switch__content,
+  .radio__content,
+  .alert__title,
+  .alert__description {
+    line-height: normal;
+  }
+
+  /* Chips are padded per use; drop the label's extra inline padding. */
+  .chip__label {
+    padding-inline: 0;
+  }
+}
+
+/*
+ * Design icons carry their own size (inline style, see components/icons.tsx).
+ * HeroUI also nudges every <svg> inside a button with small margins; opt our icons out.
+ * Unlayered on purpose so it beats HeroUI's component layer.
+ */
+.button svg[data-icon],
+.toggle-button svg[data-icon],
+.link svg[data-icon] {
+  margin: 0;
+}

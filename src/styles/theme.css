@@ -1,0 +1,262 @@
+/*
+ * SATbridge design tokens
+ * -----------------------
+ * Values are copied 1:1 from the design file (sat-prep-app-design/project/SATbridge v4.dc.html).
+ *
+ * 1. `--bg`, `--surface`, `--text`, … are the design's own token names.
+ * 2. HeroUI's semantic variables (`--background`, `--accent`, `--danger`, …) are pointed at them,
+ *    so every HeroUI component picks up the SATbridge palette automatically.
+ * 3. `@theme inline` exposes the tokens as Tailwind classes: `bg-surface-2`, `text-ink`, `border-border-3`…
+ *
+ * These rules are intentionally unlayered so they win over HeroUI's layered defaults.
+ */
+
+:root,
+.light,
+[data-theme="light"] {
+  /* Neutrals */
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-2: #f8fbfd;
+  --surface-3: #eaf1f5;
+  --hover: #f2f7fa;
+  --border: #e7edf2;
+  --border-2: #dce5eb;
+  --border-3: #c7d5de;
+  --text: #0f2430;
+  --text-2: #41586a;
+  --muted: #5a7383;
+  --muted-2: #93a7b4;
+  --muted-3: #b4c3cc;
+  --btn: #0f2430;
+  --btn-h: #1d3b4b;
+  /* Dark hero cards on phones (score card, unit header). */
+  --ink-surface: #0e2430;
+
+  /* Tints: background / border / foreground-on-tint */
+  --tint-blue: #e7f7fe;
+  --tint-blue-bd: #c3e9fa;
+  --on-blue: #0072aa;
+  --tint-pink: #fdebf4;
+  --tint-pink-bd: #f9c8df;
+  --on-pink: #b02a70;
+  --tint-green: #eafbef;
+  --tint-green-bd: #cdebd8;
+  --on-green: #15803d;
+  --tint-red: #fef2f2;
+  --tint-red-bd: #fcd9d9;
+  --on-red: #b91c1c;
+  --tint-amber: #fef3c7;
+  --tint-amber-bd: #fde68a;
+  --on-amber: #b45309;
+  --tint-violet: #f5f1ff;
+  --tint-violet-bd: #e5d8ff;
+  --on-violet: #6b32c9;
+
+  /* Sidebar */
+  --side: #0c3a4e;
+  --side-2: #0a3242;
+  --side-active: #14506a;
+
+  /* HeroUI semantic mapping */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --surface-foreground: var(--text);
+  --surface-secondary: var(--surface-2);
+  --surface-tertiary: var(--surface-3);
+  --overlay: var(--surface);
+  --overlay-foreground: var(--text);
+  --default: var(--surface-3);
+  --default-foreground: var(--text);
+  --separator: var(--border);
+  --segment: var(--surface);
+  --segment-foreground: var(--text);
+  --field-background: var(--surface);
+  --field-foreground: var(--text);
+  --field-placeholder: var(--muted-2);
+  --focus: #009ada;
+  --link: #009ada;
+  --accent: #009ada;
+  --accent-hover: #0aa6e8;
+  --accent-foreground: #ffffff;
+  --success: #22c55e;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --danger-foreground: #ffffff;
+  --backdrop: rgba(12, 26, 34, 0.5);
+}
+
+.dark,
+[data-theme="dark"] {
+  --bg: #0a1014;
+  --surface: #141b22;
+  --surface-2: #111a21;
+  --surface-3: #1b2530;
+  --hover: #1c2731;
+  --border: #243039;
+  --border-2: #2c3a45;
+  --border-3: #3c4c59;
+  --text: #e9f1f6;
+  --text-2: #c2d2dc;
+  --muted: #a3b6c2;
+  --muted-2: #8398a6;
+  --muted-3: #647884;
+  --btn: #2a3946;
+  --btn-h: #354857;
+  --ink-surface: #0c161c;
+
+  --tint-blue: #0e2a38;
+  --tint-blue-bd: #1c4a61;
+  --on-blue: #7fd7f5;
+  --tint-pink: #331628;
+  --tint-pink-bd: #5a2745;
+  --on-pink: #f58fc2;
+  --tint-green: #12281b;
+  --tint-green-bd: #26492f;
+  --on-green: #7be3a6;
+  --tint-red: #331a1a;
+  --tint-red-bd: #5a2a2a;
+  --on-red: #ff9b9b;
+  --tint-amber: #302514;
+  --tint-amber-bd: #584324;
+  --on-amber: #f5c46b;
+  --tint-violet: #221d33;
+  --tint-violet-bd: #3b315c;
+  --on-violet: #c4a9ff;
+
+  --side: #0a1922;
+  --side-2: #08141b;
+  --side-active: #1b3b4d;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+  --surface-foreground: var(--text);
+  --surface-secondary: var(--surface-2);
+  --surface-tertiary: var(--surface-3);
+  --overlay: var(--surface);
+  --overlay-foreground: var(--text);
+  --default: var(--surface-3);
+  --default-foreground: var(--text);
+  --separator: var(--border);
+  --segment: var(--surface);
+  --segment-foreground: var(--text);
+  --field-background: var(--surface);
+  --field-foreground: var(--text);
+  --field-placeholder: var(--muted-2);
+  --backdrop: rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  /* Theme-aware neutrals (bg-surface, text-muted, border-border come from HeroUI already) */
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-hover: var(--hover);
+  --color-border-2: var(--border-2);
+  --color-border-3: var(--border-3);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-muted-2: var(--muted-2);
+  --color-muted-3: var(--muted-3);
+  --color-btn: var(--btn);
+  --color-btn-hover: var(--btn-h);
+  --color-ink-surface: var(--ink-surface);
+
+  --color-tint-blue: var(--tint-blue);
+  --color-tint-blue-bd: var(--tint-blue-bd);
+  --color-on-blue: var(--on-blue);
+  --color-tint-pink: var(--tint-pink);
+  --color-tint-pink-bd: var(--tint-pink-bd);
+  --color-on-pink: var(--on-pink);
+  --color-tint-green: var(--tint-green);
+  --color-tint-green-bd: var(--tint-green-bd);
+  --color-on-green: var(--on-green);
+  --color-tint-red: var(--tint-red);
+  --color-tint-red-bd: var(--tint-red-bd);
+  --color-on-red: var(--on-red);
+  --color-tint-amber: var(--tint-amber);
+  --color-tint-amber-bd: var(--tint-amber-bd);
+  --color-on-amber: var(--on-amber);
+  --color-tint-violet: var(--tint-violet);
+  --color-tint-violet-bd: var(--tint-violet-bd);
+  --color-on-violet: var(--on-violet);
+
+  --color-side: var(--side);
+  --color-side-2: var(--side-2);
+  --color-side-active: var(--side-active);
+
+  /* Fixed brand colours (identical in light and dark) */
+  --color-brand-ink: #007ab0;
+  --color-success-ink: #16a34a;
+  --color-danger-ink: #dc2626;
+  --color-pink: #e5308f;
+  --color-pink-hover: #d0227e;
+  --color-pink-ink: #c42b8e;
+  --color-violet: #7c3aed;
+  --color-orange: #f97316;
+  --color-gold: #ffc53d;
+  --color-gold-ink: #4a3200;
+  --color-yellow: #ffc93c;
+  --color-navy: #0e2430;
+  --color-sky: #3ed0f5;
+  /** Deep teal behind the mobile content card and tab bar. */
+  --color-teal: #0c3a4e;
+
+  /* Motion used by the design */
+  --animate-fade: fade 0.16s ease-out;
+  --animate-slide-in: slidein 0.16s ease-out;
+  --animate-pop: pop 0.2s ease-out;
+  /* Top loading bar while a page's code downloads: quick to 60%, then crawls. */
+  --animate-route-progress: route-progress 1.4s ease-out forwards;
+}
+
+@keyframes route-progress {
+  from {
+    width: 0;
+  }
+  40% {
+    width: 60%;
+  }
+  to {
+    width: 88%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

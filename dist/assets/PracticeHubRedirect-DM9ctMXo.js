@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Dk72oS4N.js";import{cn as t,kt as n}from"./index-DcYMX3dZ.js";var r=e();function i(){return(0,r.jsx)(t,{to:n.questionBank,replace:!0})}export{i as PracticeHubRedirect};

@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Dk72oS4N.js";import{f as t}from"./compose-U624G3a7.js";import{t as n}from"./Eyebrow-DiNb6ANs.js";var r=e();function i({children:e,className:i}){return(0,r.jsx)(n,{className:t(`text-[11px] tracking-[1.1px]`,i),children:e})}export{i as t};
